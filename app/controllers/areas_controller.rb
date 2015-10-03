@@ -15,7 +15,8 @@ class AreasController < ApplicationController
   def triangle
     @b = params[:base].to_f
     @h = params[:vertical_height].to_f
-    area = 0.5 * b * h
+    # add @ to area, b & h in area formula use instance variable - JW
+    @area = 0.5 * @b * @h
   end
 
   def rectangle
