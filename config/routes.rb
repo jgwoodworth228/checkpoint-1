@@ -7,6 +7,9 @@ Rails.application.routes.draw do
  # added ":" to base and vertical_height made them symbols(?) - JW
   get("/areas/triangle/:base/:vertical_height", { :controller => "areas", :action => "triangle" })
 
+ # added route for rectangles with params width and height - JW
+  get("/areas/rectangle/:width/:height", { :controller => "areas", :action => "rectangle" })
+
   get("/areas/trapezoid/:a/:b/:vertical_height", { :controller => "areas", :action => "trapezoid" })
 
   get("/areas/ellipse/:a/:b", { :controller => "areas", :action => "ellipse" })
