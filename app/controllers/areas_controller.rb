@@ -6,7 +6,10 @@ class AreasController < ApplicationController
 
   def circle
     pi = 3.1416 # Close enough.
-    @r = params[:radius]
+    # convert radius to float - JW
+    @r = params[:radius].to_f
+    # adding area formula for circle - JW
+    @area = pi*@r**2
   end
 
   def triangle
